@@ -7,10 +7,10 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: {
-        default: 'nx run angular-library:serve:development',
-        production: 'nx run angular-library:serve:production',
+        default: 'nx run angular-project:serve:development',
+        production: 'nx run angular-project:serve:production',
       },
-      ciWebServerCommand: 'nx run angular-library:serve-static',
+      ciWebServerCommand: 'nx run angular-project:serve-static',
     }),
     baseUrl: 'http://localhost:4200',
   },

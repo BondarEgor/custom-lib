@@ -1,27 +1,27 @@
 {
-  "name": "angular-library",
+  "name": "angular-project",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/angular-library/src",
+  "sourceRoot": "apps/angular-project/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/angular-library",
-        "index": "apps/angular-library/src/index.html",
-        "browser": "apps/angular-library/src/main.ts",
+        "outputPath": "dist/apps/angular-project",
+        "index": "apps/angular-project/src/index.html",
+        "browser": "apps/angular-project/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/angular-library/tsconfig.app.json",
+        "tsConfig": "apps/angular-project/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/angular-library/public"
+            "input": "apps/angular-project/public"
           }
         ],
-        "styles": ["apps/angular-library/src/styles.css"],
+        "styles": ["apps/angular-project/src/styles.css"],
         "scripts": []
       },
       "configurations": {
@@ -52,10 +52,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "angular-library:build:production"
+          "buildTarget": "angular-project:build:production"
         },
         "development": {
-          "buildTarget": "angular-library:build:development"
+          "buildTarget": "angular-project:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -63,7 +63,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "angular-library:build"
+        "buildTarget": "angular-project:build"
       }
     },
     "lint": {
@@ -73,15 +73,15 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/angular-library/jest.config.ts"
+        "jestConfig": "apps/angular-project/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "angular-library:build",
+        "buildTarget": "angular-project:build",
         "port": 4200,
-        "staticFilePath": "dist/apps/angular-library/browser",
+        "staticFilePath": "dist/apps/angular-project/browser",
         "spa": true
       }
     }
