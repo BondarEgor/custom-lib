@@ -29,7 +29,7 @@ export class MyButtonStyle {}
 export class MyButtonDirective implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
   @Input() size: 's' | 'm' | 'l' | 'xl' = 'm';
-  @Input() appearance: 'primary' | 'secondary' = 'secondary';
+  @Input() appearance: 'primary' | 'secondary' | 'destructive' = 'secondary';
   @Input() shape: null | 'rounded' | 'square' = null
   ngOnInit(): void {
     this.setButtonStyles();

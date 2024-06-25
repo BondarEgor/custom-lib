@@ -1,4 +1,11 @@
+@font-fallback: -apple-system, 'BlinkMacSystemFont', system-ui, 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+
 &:root {
+
+	// Fonts
+	--ey-font-heading: 'Manrope', @font-fallback;
+	--ey-font-text: 'Manrope', @font-fallback;
+
 	// Backgrounds
 	--ey-background-base: #fff;
 	--ey-background-base-alt: #f6f6f6;
@@ -12,9 +19,27 @@
 	--ey-background-accent-opposite-hover: #333;
 	--ey-background-accent-opposite-pressed: #808080;
 	--ey-background-elevation-1: #fff;
-	--ey-background-elevation-2: #fff;
 
 	//Shapes
 	--ey-button-rounded: 12px;
 	--ey-button-square: 4px;
+
+	//Paddings
+	--ey-padding-s: 0.75rem;
+	--ey-padding-m: 1rem;
+	--ey-padding-l: 1.25rem;
+	--ey-padding-xl: 2rem;
+	
+	//Fonts sizes
+	--ey-font-text-xl: normal 1.1875rem/1.75rem var(--ey-font-text);
+	--ey-font-text-l: normal 1.0625rem/1.75rem var(--ey-font-text);
+	--ey-font-text-m: normal 1rem/1.5rem var(--ey-font-text);
+	--ey-font-text-s: normal 0.8125rem/1.25rem var(--ey-font-text);
+	--ey-font-text-xs: normal 0.6875rem/1rem var(--ey-font-text);
+	
+	//Colors
+	--ey-color-white: #fff;
+	--ey-color-black: #000;
+	--ey-color-gray: #808080;
+	--ey-color-primary: #526ed3;
 }

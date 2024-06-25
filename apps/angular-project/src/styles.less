@@ -6,37 +6,51 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  font: var(--ey-font-text);
 }
 
 /* Sizes variants */
 .ey-button--s {
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: var(--ey-padding-s) var(--ey-padding-m);
+  font: var(--ey-font-text-s);
 }
 
 .ey-button--m {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: var(--ey-padding-m) var(--ey-padding-l);
+  font: var(--ey-font-text-m);
 }
 
 .ey-button--l {
-  padding: 15px 30px;
-  font-size: 20px;
+  padding: var(--ey-padding-l) var(--ey-padding-xl);
+  font: var(--ey-font-text-l);
 }
 
 /* Appearance variants */
 .ey-button--primary {
   background-color: var(--ey-background-accent-1);
-  color: white;
+  color: var(--ey-color-white);
 }
+.ey-button--secondary {
+  background-color: var(--ey-background-accent-2);
+  color: var(--ey-color-white);
+}
+
+.ey-button--destructive {
+  background-color: var(--ey-background-accent-opposite);
+  color: var(--ey-color-primary);
+}
+
+.ey-button--primary:hover {
+  background-color: var(--ey-background-accent-1-hover);
+  color: var(--ey-color-white);
+}
+
 .ey-button-rounded {
   border-radius: var(--ey-button-rounded);
 }
-.ey-button-square { 
+
+.ey-button-square {
   border-radius: var(--ey-button-square);
 
 }
-.ey-button--primary:hover {
-  background-color: var(--ey-background-accent-1-hover);
-  color: white;
-}
+
