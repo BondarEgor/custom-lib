@@ -77,7 +77,7 @@
     "@nx/angular:application": {
       "e2eTestRunner": "cypress",
       "linter": "eslint",
-      "style": "css",
+      "style": "less",
       "unitTestRunner": "jest"
     },
     "@nx/web:application": {

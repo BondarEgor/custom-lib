@@ -1,0 +1,42 @@
+@import '../../../my-ui-lib//styles/variables/colors/colors.less';
+
+.ey-button {
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Sizes variants */
+.ey-button--s {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.ey-button--m {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.ey-button--l {
+  padding: 15px 30px;
+  font-size: 20px;
+}
+
+/* Appearance variants */
+.ey-button--primary {
+  background-color: var(--ey-background-accent-1);
+  color: white;
+}
+.ey-button-rounded {
+  border-radius: var(--ey-button-rounded);
+}
+.ey-button-square { 
+  border-radius: var(--ey-button-square);
+
+}
+.ey-button--primary:hover {
+  background-color: var(--ey-background-accent-1-hover);
+  color: white;
+}

@@ -21,7 +21,7 @@
             "input": "apps/angular-project/public"
           }
         ],
-        "styles": ["apps/angular-project/src/styles.css"],
+        "styles": ["apps/angular-project/src/styles.less"],
         "scripts": []
       },
       "configurations": {
