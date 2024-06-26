@@ -13,10 +13,11 @@ import {
 @Component({
   standalone: true,
   template: '',
-  styleUrls: ['./button.css'],
+  styleUrls: ['./button.less'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class MyButtonStyle {}
 
 @Directive({
@@ -29,8 +30,10 @@ export class MyButtonStyle {}
 export class MyButtonDirective implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
   @Input() size: 's' | 'm' | 'l' | 'xl' = 'm';
-  @Input() appearance: 'primary' | 'secondary' | 'destructive' = 'secondary';
-  @Input() shape: null | 'rounded' | 'square' = null
+  @Input() appearance: 'primary' | 'secondary' | 'destructive' | 'outlined' = 'secondary';
+  @Input() shape: null | 'rounded' | 'square' = null;
+  @Input() disabled: true | false = false;
+
   ngOnInit(): void {
     this.setButtonStyles();
   }
@@ -41,6 +44,15 @@ export class MyButtonDirective implements OnInit {
       this.el.nativeElement,
       `ey-button--${this.appearance}`
     );
-    this.renderer.addClass(this.el.nativeElement, `ey-button-${this.shape}`)
+    this.renderer.addClass(this.el.nativeElement, `ey-button-${this.shape}`);
+    this.renderer.addClass(
+      this.el.nativeElement,
+      `ey-button${this.disabled ? '-disabled' : ''}`
+    );
+  }
+
+  @HostListener('click')
+  protected onButtonClick(): void {
+
   }
 }

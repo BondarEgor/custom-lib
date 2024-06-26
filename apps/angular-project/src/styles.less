@@ -1,12 +1,14 @@
-@import '../../../my-ui-lib//styles/variables/colors/colors.less';
+@import '../../../my-ui-lib//styles/variables/constants/constants.less';
 
 .ey-button {
   border: none;
-  border-radius: 4px;
-  color: white;
+  border-radius: var(--ey-border-rounded);
+  color: var(--ey-color-white);
   cursor: pointer;
   transition: all 0.3s ease;
   font: var(--ey-font-text);
+  width: 100%;
+  text-align: center;
 }
 
 /* Sizes variants */
@@ -24,33 +26,111 @@
   padding: var(--ey-padding-l) var(--ey-padding-xl);
   font: var(--ey-font-text-l);
 }
+.ey-button--xl {
+  padding: var(--ey-padding-l) var(--ey-padding-xl);
+  font: var(--ey-font-text-xl);
+}
 
 /* Appearance variants */
 .ey-button--primary {
-  background-color: var(--ey-background-accent-1);
-  color: var(--ey-color-white);
-}
-.ey-button--secondary {
-  background-color: var(--ey-background-accent-2);
-  color: var(--ey-color-white);
-}
-
-.ey-button--destructive {
-  background-color: var(--ey-background-accent-opposite);
-  color: var(--ey-color-primary);
+  background-color: var(--ey-bg-accent-1);
 }
 
 .ey-button--primary:hover {
-  background-color: var(--ey-background-accent-1-hover);
-  color: var(--ey-color-white);
+  background-color: var(--ey-bg-accent-1-hover);
 }
 
+.ey-button--primary:active {
+  background-color: var(--ey-bg-accent-1-pressed);
+}
+
+.ey-button--secondary {
+  background-color: var(--ey-bg-accent-2);
+}
+
+.ey-button--secondary:hover {
+  background-color: var(--ey-bg-accent-2-hover);
+}
+
+.ey-button--secondary:active {
+  background-color: var(--ey-bg-accent-2-pressed);
+}
+
+.ey-button--destructive {
+  background-color: var(--ey-bg-accent-opposite);
+}
+
+.ey-button--destructive:hover {
+  background-color: var(--ey-bg-accent-opposite-hover);
+}
+
+.ey-button--destructive:active {
+  background-color: var(--ey-bg-accent-opposite-pressed);
+}
+
+.ey-button--outlined {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.ey-button--outlined:hover {
+  background-color: #d8d6d6;
+  border: 1px solid black;
+}
+
+.ey-button--outlined:active {
+  background-color: #7d7b7b;
+}
+
+//Borders variants
 .ey-button-rounded {
-  border-radius: var(--ey-button-rounded);
+  border-radius: var(--ey-border-rounded);
 }
 
 .ey-button-square {
-  border-radius: var(--ey-button-square);
-
+  border-radius: var(--ey-border-square);
 }
 
+//Disabled
+.ey-button-disabled {
+  opacity: .9;
+  pointer-events: none;
+}
+
+//Group items positioning
+.ey-direction-col {
+  flex-direction: column;
+}
+
+.ey-direction-row {
+  flex-direction: row;
+}
+
+.ey-button-group {
+  display: flex;
+}
+
+.ey-justify-end {
+  justify-content: flex-end;
+}
+
+.ey-justify-start {
+  justify-content: flex-start;
+}
+
+.ey-gap-s {
+  gap: var(--ey-gap-s);
+}
+
+.ey-gap-m {
+  gap: var(--ey-gap-m);
+}
+
+.ey-gap-l {
+  gap: var(--ey-gap-l);
+}
+
+.ey-gap-xl {
+  gap: var(--ey-gap-xl);
+}
