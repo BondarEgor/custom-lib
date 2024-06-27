@@ -1,4 +1,4 @@
-.some {
-	width: 100px;
-	height: 100px;
+.container {
+display: flex;
+justify-content: space-between;
 }

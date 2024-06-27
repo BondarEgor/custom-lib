@@ -1,0 +1,17 @@
+import type { FactoryProvider, InjectionToken } from '@angular/core';
+import { Optional, SkipSelf } from '@angular/core';
+
+export function eyProvideOptions<T>(
+  provide: InjectionToken<T>,
+  options: Partial<T>,
+  fallback: T
+): FactoryProvider {
+  return {
+    provide,
+    deps: [[new Optional(), new SkipSelf(), provide]],
+    useFactory: (parent: T | null): T => ({
+      ...(parent || fallback),
+      ...options,
+    }),
+  };
+}

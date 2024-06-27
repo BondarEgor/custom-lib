@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'my-ui-lib',
+  displayName: 'ey-ui',
   preset: '../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../coverage/my-ui-lib',
+  coverageDirectory: '../coverage/ey-ui',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
