@@ -1,16 +1,18 @@
-@import '../../../styles/constants/constants.less';
-
-[appearance='primary'] {
+[data-appearance='primary'] {
 	--ey-bg: var(--ey-bg-primary-1);
-
+	transition: all .3s ease;
 	background: var(--ey-bg);
 	color: var(--ey-text-primary-on-accent-1);
 
 	&:hover {
-		--t-bg: var(--ey-bg-primary-1-hover)
+		--ey-bg: var(--ey-bg-primary-1-hover);
+		background: var(--ey-bg);
+		color: var(--ey-text-primary-on-accent-1);
 	}
 
 	&:active {
-		--t-bg: var(--ey-bg-primary-1-pressed)
+		--ey-bg: var(--ey-bg-primary-1-pressed);
+		background: var(--ey-bg);
+		color: var(--ey-text-primary-on-accent-1);
 	}
 }

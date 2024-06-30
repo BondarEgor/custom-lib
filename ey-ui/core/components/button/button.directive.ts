@@ -28,7 +28,11 @@ export class EyButtonStyles {}
   hostDirectives: [
     {
       directive: EyAppearance,
-      inputs: ['eyAppearance : appearance'],
+      inputs: [
+        'eyAppearance : appearance',
+        'eyAppearanceState',
+        'eyAppearanceFocus'
+      ],
     },
   ],
   host: {

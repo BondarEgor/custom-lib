@@ -6,7 +6,6 @@ import { EyAppearanceState } from '@ey-ui/core';
   standalone: true,
   selector: '[eyAppearance]',
   host: {
-    eyAppearance: '',
     '[attr.data-appearance]': 'eyAppearance',
     '[attr.data-state]': 'eyAppearanceState',
     '[attr.data-focus]': 'eyAppearanceFocus',
