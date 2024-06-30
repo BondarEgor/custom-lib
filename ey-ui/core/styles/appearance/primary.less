@@ -1,0 +1,16 @@
+@import '../../../styles/constants/constants.less';
+
+[appearance='primary'] {
+	--ey-bg: var(--ey-bg-primary-1);
+
+	background: var(--ey-bg);
+	color: var(--ey-text-primary-on-accent-1);
+
+	&:hover {
+		--t-bg: var(--ey-bg-primary-1-hover)
+	}
+
+	&:active {
+		--t-bg: var(--ey-bg-primary-1-pressed)
+	}
+}

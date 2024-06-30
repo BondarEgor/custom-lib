@@ -1,105 +1,51 @@
-@import '../../../../ey-ui/styles/constants/constants.less';
+@import '../../../styles/constants/constants.less';
 
-.ey-button {
-  display: block;
-  border: none;
-  border-radius: var(--ey-border-rounded);
-  color: var(--ey-color-white);
+[eyButton] {
+
+  --ey-gap: 0.125rem;
+
+  height: var(--ey-height-m);
+  justify-content: center;
+  border-radius: var(--ey-radius);
+  padding: var(--ey-padding);
+  user-select: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font: var(--ey-font-text);
-  text-align: center;
-}
+  display: flex;
+  align-items: center;
 
-/* Sizes variants */
-.ey-button--s {
-  padding: var(--ey-padding-s) var(--ey-padding-m);
-  font: var(--ey-font-text-s);
-}
+  &[data-size='s'] {
+    --ey-size: var(--ey-size-s);
+    --ey-padding: var(--ey-padding-s);
+    --ey-radius: var(--ey-radius-s);
+    --ey-margin: var(--ey-margin-s);
 
-.ey-button--m {
-  padding: var(--ey-padding-m) var(--ey-padding-l);
-  font: var(--ey-font-text-m);
-}
+    font: var(--ey-font-text-s);
+  }
 
-.ey-button--l {
-  padding: var(--ey-padding-l) var(--ey-padding-xl);
-  font: var(--ey-font-text-l);
-}
+  &[data-size='m'] {
+    --ey-size: var(--ey-size-m);
+    --ey-padding: var(--ey-padding-m);
+    --ey-radius: var(--ey-radius-m);
+    --ey-margin: var(--ey-margin-m);
 
-.ey-button--xl {
-  padding: var(--ey-padding-l) var(--ey-padding-xl);
-  font: var(--ey-font-text-xl);
-}
+    font: var(--ey-font-text-m);
+  }
 
-// /* Appearance variants */
-.ey-button--primary {
-  background-color: var(--ey-bg-accent-1);
-}
+  &[data-size='l'] {
+    --ey-size: var(--ey-size-l);
+    --ey-padding: var(--ey-padding-l);
+    --ey-radius: var(--ey-radius-l);
+    --ey-margin: var(--ey-margin-l);
 
-.ey-button--primary:hover {
-  background-color: var(--ey-bg-accent-1-hover);
-}
+    font: var(--ey-font-text-l);
+  }
 
-.ey-button--primary:active {
-  background-color: var(--ey-bg-accent-1-pressed);
-}
+  &[data-size='xl'] {
+    --ey-size: var(--ey-size-xl);
+    --ey-padding: var(--ey-padding-xl);
+    --ey-radius: var(--ey-radius-xl);
+    --ey-margin: var(--ey-margin-xl);
 
-.ey-button--secondary {
-  background-color: var(--ey-bg-accent-2);
+    font: var(--ey-font-text-xl);
+  }
 }
-
-.ey-button--secondary:hover {
-  background-color: var(--ey-bg-accent-2-hover);
-}
-
-.ey-button--secondary:active {
-  background-color: var(--ey-bg-accent-2-pressed);
-}
-
-.ey-button--destructive {
-  background-color: var(--ey-bg-accent-opposite);
-}
-
-.ey-button--destructive:hover {
-  background-color: var(--ey-bg-accent-opposite-hover);
-}
-
-.ey-button--destructive:active {
-  background-color: var(--ey-bg-accent-opposite-pressed);
-}
-
-.ey-button--outlined {
-  background-color: var(--ey-color-white);
-  ;
-  border: 1px solid var(--ey-color-black);
-  color: var(--ey-color-black);
-}
-
-.ey-button--outlined:hover {
-  background-color: var(--ey-color-gray);
-  border: 1px solid var(--ey-color-black);
-}
-
-.ey-button--outlined:active {
-  background-color: #7d7b7b;
-}
-
-// //Borders variants
-.ey-button-rounded {
-  border-radius: var(--ey-border-rounded);
-}
-
-.ey-button-square {
-  border-radius: var(--ey-border-square);
-}
-
-// //Disabled
-.ey-button-disabled {
-  opacity: .6;
-  border: none;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-// //Group items positioning
