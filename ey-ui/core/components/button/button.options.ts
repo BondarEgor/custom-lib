@@ -15,11 +15,11 @@ export const EY_BUTTON_DEFAULT_OPTIONS: EyButtonOptions = {
 export const EY_BUTTON_OPTIONS = eyCreateToken(EY_BUTTON_DEFAULT_OPTIONS);
 
 export function eyButtonOptionsProvider(
-  options: Partial<EyButtonOptions>
+  options: Partial<EyButtonOptions>,
 ): FactoryProvider {
   return eyProvideOptions(
     EY_BUTTON_OPTIONS,
     options,
-    EY_BUTTON_DEFAULT_OPTIONS
+    EY_BUTTON_DEFAULT_OPTIONS,
   );
 }

@@ -4,7 +4,7 @@ import { Optional, SkipSelf } from '@angular/core';
 export function eyProvideOptions<T>(
   provide: InjectionToken<T>,
   options: Partial<T>,
-  fallback: T
+  fallback: T,
 ): FactoryProvider {
   return {
     provide,

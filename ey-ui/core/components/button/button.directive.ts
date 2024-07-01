@@ -31,7 +31,7 @@ export class EyButtonStyles {}
       inputs: [
         'eyAppearance : appearance',
         'eyAppearanceState',
-        'eyAppearanceFocus'
+        'eyAppearanceFocus',
       ],
     },
   ],

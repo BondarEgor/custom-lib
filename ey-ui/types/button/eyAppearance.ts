@@ -1,7 +1,8 @@
 export type EyButtonAppearance =
   | 'primary'
-  | 'secondary'
-  | 'destructive'
+  | 'orange'
+  | 'violet'
+  | 'blue'
   | 'outlined';
 
 export type EyButtonShape = null | 'rounded' | 'square';

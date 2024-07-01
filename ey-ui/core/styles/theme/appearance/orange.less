@@ -1,0 +1,21 @@
+[data-appearance='orange'] {
+  --ey-bg: var(--ey-bg-orange);
+
+  transition: all 0.3s ease;
+  background: var(--ey-bg);
+  color: var(--ey-text-primary-on-accent-1);
+
+  &:hover {
+    --ey-bg: var(--ey-bg-orange-hover);
+
+    background: var(--ey-bg);
+    color: var(--ey-text-primary-on-accent-1);
+  }
+
+  &:active {
+    --ey-bg: var(--ey-bg-orange-pressed);
+
+    background: var(--ey-bg);
+    color: var(--ey-text-primary-on-accent-1);
+  }
+}

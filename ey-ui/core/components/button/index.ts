@@ -1,2 +1,2 @@
-export * from './button.directive'
-export * from './button.options'
+export * from './button.directive';
+export * from './button.options';
