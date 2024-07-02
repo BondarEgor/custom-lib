@@ -29,7 +29,7 @@ export class ButtonGroupComponent implements OnInit {
     this.renderer.addClass(this.el.nativeElement, `ey-button-group`);
     this.renderer.addClass(
       this.el.nativeElement,
-      `ey-direction-${this.direction}`,
+      `ey-direction-${this.direction}`
     );
     this.renderer.addClass(this.el.nativeElement, `ey-justify-${this.justify}`);
     this.renderer.addClass(this.el.nativeElement, `ey-gap-${this.gap}`);

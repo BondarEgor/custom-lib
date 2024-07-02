@@ -18,7 +18,7 @@
       "@ey-ui/core": ["./ey-ui/core"],
       "@ey-ui/styles": ["./ey-ui/styles"],
       "@ey-ui/types": ["./ey-ui/types"],
-      "@ey-ui/utils": ["./ey-ui/utils"],
+      "@ey-ui/utils": ["./ey-ui/utils"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -12,7 +12,7 @@ const MAP = eyCreateTokenFromFactory(() => {
   const map = new Map();
 
   inject(DestroyRef).onDestroy(() =>
-    map.forEach((component) => component.destroy()),
+    map.forEach((component) => component.destroy())
   );
 
   return map;

@@ -5,7 +5,7 @@ export function eyCreateToken<T>(defaults: T): InjectionToken<T> {
 }
 
 export function eyCreateTokenFromFactory<T>(
-  factory: () => T,
+  factory: () => T
 ): InjectionToken<T> {
   return new InjectionToken<T>('', { factory });
 }

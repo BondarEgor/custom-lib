@@ -1,10 +1,9 @@
-export type EyButtonAppearance =
-  | 'primary'
+export type EyButtonAppearance = 'primary'
   | 'orange'
   | 'violet'
   | 'blue'
-  | 'outlined';
+  | 'outlined'
 
-export type EyButtonShape = null | 'rounded' | 'square';
+export type EyButtonShape = null | 'rounded' | 'square'
 
-export type EyButtonSize = 's' | 'm' | 'l' | 'xl';
+export type EyButtonSize = 's' | 'm' | 'l' | 'xl'

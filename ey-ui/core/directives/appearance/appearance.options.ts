@@ -9,11 +9,11 @@ export const EY_APPEARANCE_DEFAULT_OPTION: EyAppearanceOptions = {
 };
 
 export const EY_APPEARANCE_OPTIONS = eyCreateToken(
-  EY_APPEARANCE_DEFAULT_OPTION,
+  EY_APPEARANCE_DEFAULT_OPTION
 );
 
 export function eyAppearanceOptionsProvider(
-  token: ProviderToken<EyAppearanceOptions>,
+  token: ProviderToken<EyAppearanceOptions>
 ): ExistingProvider {
   return eyProvide(EY_APPEARANCE_OPTIONS, token);
 }
