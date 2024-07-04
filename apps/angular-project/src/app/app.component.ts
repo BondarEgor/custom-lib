@@ -1,14 +1,13 @@
+import { ButtonGroupComponent } from '@ey-ui/core';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { MyButtonDirective } from '@ey-ui/core';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, MyButtonDirective, ButtonGroupComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'angular-project';
-}
+export class AppComponent {}

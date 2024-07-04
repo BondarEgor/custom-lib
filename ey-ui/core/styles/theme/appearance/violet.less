@@ -1,0 +1,21 @@
+[data-appearance='violet'] {
+  --ey-bg: var(--ey-bg-violet);
+
+  transition: all 0.3s ease;
+  background: var(--ey-bg);
+  color: var(--ey-text-primary-on-accent-1);
+
+  &:hover {
+    --ey-bg: var(--ey-bg-violet-hover);
+
+    background: var(--ey-bg);
+    color: var(--ey-text-primary-on-accent-1);
+  }
+
+  &:active {
+    --ey-bg: var(--ey-bg-violet-pressed);
+
+    background: var(--ey-bg);
+    color: var(--ey-text-primary-on-accent-1);
+  }
+}
