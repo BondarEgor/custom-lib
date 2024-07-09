@@ -1,9 +1,13 @@
-<div>
-  <button eyButton appearance="primary">Some text</button>
+<div class='block'>
+	<button eyButton appearance="violet" (click)="onClick()">Toggle expanded</button>
 
-  <button size="m" eyButton appearance="orange">Some text</button>
+<ey-expand [expanded]='isExpanded'>
+  <p>Some text to show</p>
+  <p>Some text to show</p>
+  <p>Some text to show</p>
+  <p>Some text to show</p>
+  <p>Some text to show</p>
+  <p>Some text to show</p>
+</ey-expand>
 
-  <button eyButton appearance="violet" size="xl">Some text</button>
-
-  <button eyButton appearance="blue">Some text</button>
 </div>
