@@ -1,0 +1,1 @@
+export type EyMode = 'primary' | 'success' | 'warning' | 'error' | 'info'

@@ -1,17 +1,18 @@
 import { CommonModule } from '@angular/common'
-import { AfterViewInit, Component, ContentChild, ElementRef, Renderer2, ViewChild, inject } from '@angular/core'
+import { Component, Renderer2, inject } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
-import { CopyButtonComponent, ExpandComponent, MyButtonDirective } from '@ey-ui/core'
+import { ButtonDirective, CopyButtonComponent, ExpandComponent, LinkDirective } from '@ey-ui/core'
 @Component({
   standalone: true,
   imports: [
     RouterModule,
-    MyButtonDirective,
+    ButtonDirective,
     ExpandComponent,
     CopyButtonComponent,
     CommonModule,
-    FormsModule
+    FormsModule,
+    LinkDirective
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',

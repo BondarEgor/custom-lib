@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core'
 import { ClipboardService } from 'ngx-clipboard'
-import { MyButtonDirective } from '../button'
+import { ButtonDirective } from '../button'
 
 @Component({
 	standalone: true,
@@ -11,7 +11,7 @@ import { MyButtonDirective } from '../button'
 		'(click)': 'onCopy()',
 	},
 	imports: [
-		MyButtonDirective,
+		ButtonDirective,
 	]
 })
 

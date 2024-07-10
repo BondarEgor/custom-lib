@@ -10,8 +10,8 @@ import {
   inject,
 } from '@angular/core'
 import { EyAppearance } from 'ey-ui/core/directives/appearance/appearance.directive'
-import { EY_BUTTON_OPTIONS } from '../button/button.options'
 import { eyWithStyles } from '../../../cdk/utils/'
+import { EY_BUTTON_OPTIONS } from '../button/button.options'
 
 @Component({
   standalone: true,
@@ -42,7 +42,7 @@ export class EyButtonStyles { }
     '[attr.data-size]': 'size',
   },
 })
-export class MyButtonDirective implements OnInit {
+export class ButtonDirective implements OnInit {
   private readonly options = inject(EY_BUTTON_OPTIONS);
   private readonly renderer = inject(Renderer2)
   private readonly element = inject(ElementRef)
@@ -59,7 +59,7 @@ export class MyButtonDirective implements OnInit {
     if (this.icon) {
       const iconElement = this.renderer.createElement('img')
       this.renderer.addClass(iconElement, 'icon')
-      this.renderer.setAttribute(iconElement, 'src',this.icon)
+      this.renderer.setAttribute(iconElement, 'src', this.icon)
       this.renderer.appendChild(this.element.nativeElement, iconElement)
     }
   }

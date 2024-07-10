@@ -1,4 +1,5 @@
-export type EyButtonAppearance = 'primary'
+export type EyButtonAppearance =
+  'primary'
   | 'orange'
   | 'violet'
   | 'blue'
