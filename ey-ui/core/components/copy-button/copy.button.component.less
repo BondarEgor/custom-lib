@@ -1,0 +1,24 @@
+.tooltip-container {
+	position: relative;
+	display: inline-block;
+
+	.tooltip-text {
+		width: 100%;
+		position: absolute;
+		bottom: -80%;
+		background-color: #3e3d3d;
+		color: white;
+		left: 10%;
+		padding: 6px 4px;
+		border: none;
+		border-radius: 8px;
+		text-align: center;
+		transition: all ease 0.3s;
+		opacity: 0;
+	}
+
+	&:hover .tooltip-text {
+		opacity: 1;
+	}
+
+}

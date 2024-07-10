@@ -2,13 +2,16 @@ import {
   ChangeDetectionStrategy,
   Component,
   Directive,
+  ElementRef,
   Input,
+  OnInit,
+  Renderer2,
   ViewEncapsulation,
   inject,
-} from '@angular/core';
-import { EyAppearance } from 'ey-ui/core/directives/appearance/appearance.directive';
-import { EY_BUTTON_OPTIONS } from '../button/button.options';
-import { eyWithStyles } from '../../../cdk/utils/';
+} from '@angular/core'
+import { EyAppearance } from 'ey-ui/core/directives/appearance/appearance.directive'
+import { EY_BUTTON_OPTIONS } from '../button/button.options'
+import { eyWithStyles } from '../../../cdk/utils/'
 
 @Component({
   standalone: true,
@@ -20,7 +23,7 @@ import { eyWithStyles } from '../../../cdk/utils/';
     class: 'ey-button',
   },
 })
-export class EyButtonStyles {}
+export class EyButtonStyles { }
 
 @Directive({
   standalone: true,
@@ -39,11 +42,25 @@ export class EyButtonStyles {}
     '[attr.data-size]': 'size',
   },
 })
-export class MyButtonDirective {
+export class MyButtonDirective implements OnInit {
   private readonly options = inject(EY_BUTTON_OPTIONS);
+  private readonly renderer = inject(Renderer2)
+  private readonly element = inject(ElementRef)
 
   @Input()
   public size = this.options.size;
 
+  @Input()
+  public icon = ''
+
   protected readonly nothing = eyWithStyles(EyButtonStyles);
+
+  ngOnInit(): void {
+    if (this.icon) {
+      const iconElement = this.renderer.createElement('img')
+      this.renderer.addClass(iconElement, 'icon')
+      this.renderer.setAttribute(iconElement, 'src',this.icon)
+      this.renderer.appendChild(this.element.nativeElement, iconElement)
+    }
+  }
 }

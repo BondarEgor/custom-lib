@@ -1,13 +1,13 @@
-<div class='block'>
-	<button eyButton appearance="violet" (click)="onClick()">Toggle expanded</button>
+<ey-copy-button [textToCopy]="textFromInput">
+  <input type="text" value='123'>
+</ey-copy-button>
+<input type="text" [(ngModel)]='textFromInput' #textToCopy>
 
-<ey-expand [expanded]='isExpanded'>
-  <p>Some text to show</p>
-  <p>Some text to show</p>
-  <p>Some text to show</p>
-  <p>Some text to show</p>
-  <p>Some text to show</p>
-  <p>Some text to show</p>
-</ey-expand>
-
-</div>
+<!-- <div class='block'>
+  <button eyButton appearance="violet" (click)="onClick()">Toggle expanded</button>
+  <ey-expand [expanded]='isExpanded'>
+    <p>Some text to show</p>
+    <p>Some text to show</p>
+    <p>Some text to show</p>
+  </ey-expand>
+</div> -->
