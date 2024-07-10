@@ -1,12 +1,10 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core'
-import { CommonModule } from '@angular/common'
 import { expandCollapse } from '../../../cdk/animations'
 @Component({
   templateUrl: './expand.component.html',
   styleUrls: ['./expand.component.less'],
   standalone: true,
   selector: 'ey-expand',
-  imports: [CommonModule],
   animations: [expandCollapse],
 })
 
