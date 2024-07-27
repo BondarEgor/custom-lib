@@ -1,0 +1,10 @@
+<aside class='aside'>
+	<div class='container'>
+		<ey-accordion-item title="Getting started">
+			Getting started
+		</ey-accordion-item>
+		<ey-accordion-item title="Components">
+			<a class='link-item' *ngFor='let component of COMPONENTS' eyLink mode="info">{{component | titlecase}}</a>
+		</ey-accordion-item>
+	</div>
+</aside>

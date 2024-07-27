@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Directive, Input, ViewEncapsulation } from '@angular/core'
 import { eyWithStyles } from 'ey-ui/cdk/utils'
-import { EyMode } from '../../../types/link/eyMode'
+import { EyMode } from '@ey-ui/types'
 @Component({
 	standalone: true,
 	template: '',

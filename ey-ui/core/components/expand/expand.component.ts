@@ -1,11 +1,15 @@
+import { CommonModule } from '@angular/common'
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core'
-import { expandCollapse } from '../../../cdk/animations'
+import { expandCollapse } from '@ey-ui/cdk'
 @Component({
   templateUrl: './expand.component.html',
   styleUrls: ['./expand.component.less'],
   standalone: true,
   selector: 'ey-expand',
   animations: [expandCollapse],
+  imports:[
+    CommonModule
+  ]
 })
 
 export class ExpandComponent implements OnChanges {

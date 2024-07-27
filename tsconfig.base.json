@@ -16,7 +16,7 @@
     "baseUrl": "./",
     "paths": {
       "@ey-ui/core": ["./ey-ui/core"],
-      "@ey-ui/styles": ["./ey-ui/styles"],
+      "@ey-ui/cdk": ["./ey-ui/cdk"],
       "@ey-ui/types": ["./ey-ui/types"],
       "@ey-ui/utils": ["./ey-ui/utils"]
     }

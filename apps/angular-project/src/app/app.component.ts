@@ -2,7 +2,10 @@ import { CommonModule } from '@angular/common'
 import { Component, Renderer2, inject } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
-import { ButtonDirective, CopyButtonComponent, ExpandComponent, LinkDirective } from '@ey-ui/core'
+import { AccordionItemComponent, ButtonDirective, CopyButtonComponent, ExpandComponent, LinkDirective, TooltipDirective } from '@ey-ui/core'
+import { DocumentPageComponent } from './document-desc/document.component'
+import { EyHeaderComponent } from "./header/header.component"
+import { EySidebarComponent } from './sidebar/sidebar.component'
 @Component({
   standalone: true,
   imports: [
@@ -12,11 +15,16 @@ import { ButtonDirective, CopyButtonComponent, ExpandComponent, LinkDirective } 
     CopyButtonComponent,
     CommonModule,
     FormsModule,
-    LinkDirective
+    LinkDirective,
+    TooltipDirective,
+    EySidebarComponent,
+    EyHeaderComponent,
+    AccordionItemComponent,
+    DocumentPageComponent,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.less',
 })
 export class AppComponent {
   renderer = inject(Renderer2)

@@ -1,5 +1,5 @@
 import { ExistingProvider, ProviderToken } from '@angular/core';
-import { eyCreateToken, eyProvide } from '../../../cdk/utils';
+import { eyCreateToken, eyProvide } from '@ey-ui/cdk';
 export interface EyAppearanceOptions {
   readonly appearance: string;
 }

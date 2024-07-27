@@ -3,14 +3,11 @@
 [eyButton] {
   --ey-gap: 0.125rem;
 
-  height: var(--ey-height-m);
   justify-content: center;
   border-radius: var(--ey-radius);
   padding: var(--ey-padding);
   user-select: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
   border: none;
 
   &[data-size='s'] {
@@ -42,17 +39,18 @@
 
   &[data-size='xl'] {
     --ey-size: var(--ey-size-xl);
-    --ey-padding: var(--ey-padding-xl);
+    --ey-padding: var(--ey-padding-l);
     --ey-radius: var(--ey-radius-xl);
     --ey-margin: var(--ey-margin-xl);
 
     font: var(--ey-font-text-xl);
   }
-  
-  > img {
+
+  >.icon {
     margin-left: 10px;
     height: 1.5em;
     width: auto;
     color: white;
+    order: 10;
   }
 }
