@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core'
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core'
 import { expandCollapse } from '@ey-ui/cdk'
 @Component({
   templateUrl: './expand.component.html',
@@ -8,8 +8,9 @@ import { expandCollapse } from '@ey-ui/cdk'
   selector: 'ey-expand',
   animations: [expandCollapse],
   imports:[
-    CommonModule
-  ]
+    CommonModule,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class ExpandComponent implements OnChanges {

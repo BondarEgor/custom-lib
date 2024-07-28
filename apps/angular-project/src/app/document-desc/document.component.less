@@ -27,12 +27,9 @@ code {
 	transition: all ease 0.3s;
 }
 
-code:hover {
-	cursor: pointer;
-	background-color: #f0f0f0;
-	color: black;
+.usage {
+	margin-bottom: 40px;
 }
-
 .usage-heading {
 	margin-bottom: 15px;
 }
@@ -40,7 +37,7 @@ code:hover {
 .usage-examples {
 	border: 1px solid var(--border-color);
 	border-radius: 12px;
-	min-height: 500px;
+	height: auto;
 }
 
 .usage-example-header {
@@ -49,10 +46,31 @@ code:hover {
 	padding:0 30px;
 	display: flex;
 	align-items: center;
+	gap: 20px;
+}
+
+.preview {
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.preview:hover {
+	border-bottom: 1px solid var(--green-main-color);
+	cursor: pointer;
+}
+
+.btn-group {
+	display: flex;
+	gap: 10px;
+
 }
 
 .usage-showcase {
-	padding:10px 30px;
-	display: flex;
-	gap: 10px;
+	padding:20px 30px;
+}
+
+.attr-example {
+	margin-bottom: 20px;
+	font-weight: 900;
 }

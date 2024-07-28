@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { ButtonDirective } from '@ey-ui/core'
 import { EyButtonAppearance, EyButtonSize } from '@ey-ui/types'
 
@@ -13,7 +13,8 @@ interface IEyButton {
 	imports: [ButtonDirective, CommonModule],
 	standalone: true,
 	templateUrl: './document.component.html',
-	styleUrl: './document.component.less'
+	styleUrl: './document.component.less',
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DocumentPageComponent {
 	
@@ -23,5 +24,6 @@ export class DocumentPageComponent {
 		{ appearance: 'violet', size: 'm' },
 		{ appearance: 'blue', size: 'l' },
 		{ appearance: 'outlined', size: 'xl' },
+		{ appearance: 'flat', size: 'xl' },
 	]
 }

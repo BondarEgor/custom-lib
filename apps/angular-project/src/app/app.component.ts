@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component, Renderer2, inject } from '@angular/core'
+import { ChangeDetectionStrategy, Component, Renderer2, inject } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
 import { AccordionItemComponent, ButtonDirective, CopyButtonComponent, ExpandComponent, LinkDirective, TooltipDirective } from '@ey-ui/core'
@@ -25,6 +25,7 @@ import { EySidebarComponent } from './sidebar/sidebar.component'
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.less',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   renderer = inject(Renderer2)

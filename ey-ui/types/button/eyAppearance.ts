@@ -4,6 +4,7 @@ export type EyButtonAppearance =
   | 'violet'
   | 'blue'
   | 'outlined'
+  | 'flat'
 
 export type EyButtonShape = null | 'rounded' | 'square'
 

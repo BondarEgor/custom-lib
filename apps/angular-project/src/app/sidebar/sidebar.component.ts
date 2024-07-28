@@ -1,26 +1,29 @@
 import { Component } from '@angular/core'
-import { AccordionItemComponent, LinkDirective } from '@ey-ui/core'
+import { AccordionItemComponent, InputComponent, LinkDirective } from '@ey-ui/core'
 import { ExpandComponent } from "../../../../../ey-ui/core/components/expand/expand.component"
 import { CommonModule } from '@angular/common'
+import { RouterModule } from '@angular/router'
 
 @Component({
 	standalone: true,
 	templateUrl: './sidebar.component.html',
 	selector: 'ey-sidebar',
-	styleUrls: ['./sidebar.component.less'],
+	styleUrl: './sidebar.component.less',
 	imports: [
 		AccordionItemComponent,
 		ExpandComponent,
 		LinkDirective,
-		CommonModule
+		CommonModule,
+		RouterModule,
+		InputComponent
 	]
 })
 
 export class EySidebarComponent {
 	COMPONENTS = [
-'button',
-'tooltip',
-'link',
-'expand',
+		'button',
+		'tooltip',
+		'link',
+		'expand',
 	]
 }

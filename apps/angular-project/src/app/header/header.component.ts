@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 
 @Component({
 	selector:'ey-header',
 	imports:[CommonModule],
 	standalone:true,
 	templateUrl:'./header.component.html',
-	styleUrls:['./header.component.less']
+	styleUrls:['./header.component.less'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class EyHeaderComponent {

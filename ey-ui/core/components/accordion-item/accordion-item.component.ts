@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core'
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core'
 import { ButtonDirective } from '../button'
 import { ExpandComponent } from '../expand'
 
@@ -10,7 +10,8 @@ import { ExpandComponent } from '../expand'
 		ButtonDirective,
 		ExpandComponent
 	],
-	selector: 'ey-accordion-item'
+	selector: 'ey-accordion-item',
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class AccordionItemComponent implements OnChanges {

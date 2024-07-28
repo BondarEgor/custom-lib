@@ -1,56 +1,49 @@
-@import '../../styles/ey-styles.local.less';
-
 [eyButton] {
   --ey-gap: 0.125rem;
-
   justify-content: center;
   border-radius: var(--ey-radius);
   padding: var(--ey-padding);
   user-select: none;
   cursor: pointer;
   border: none;
+}
 
-  &[data-size='s'] {
-    --ey-size: var(--ey-size-s);
-    --ey-padding: var(--ey-padding-s);
-    --ey-radius: var(--ey-radius-s);
-    --ey-margin: var(--ey-margin-s);
+[data-size='s'][eyButton] {
+  --ey-size: var(--ey-size-s);
+  --ey-padding: var(--ey-padding-s);
+  --ey-radius: var(--ey-radius-s);
+  --ey-margin: var(--ey-margin-s);
+  font: var(--ey-font-text-s);
+}
 
-    font: var(--ey-font-text-s);
-  }
+[data-size='m'][eyButton] {
+  --ey-size: var(--ey-size-m);
+  --ey-padding: var(--ey-padding-m);
+  --ey-radius: var(--ey-radius-m);
+  --ey-margin: var(--ey-margin-m);
+  font: var(--ey-font-text-m);
+}
 
-  &[data-size='m'] {
-    --ey-size: var(--ey-size-m);
-    --ey-padding: var(--ey-padding-m);
-    --ey-radius: var(--ey-radius-m);
-    --ey-margin: var(--ey-margin-m);
+[data-size='l'][eyButton] {
+  --ey-size: var(--ey-size-l);
+  --ey-padding: var(--ey-padding-l);
+  --ey-radius: var(--ey-radius-l);
+  --ey-margin: var(--ey-margin-l);
+  font: var(--ey-font-text-l);
+}
 
-    font: var(--ey-font-text-m);
-  }
+[data-size='xl'][eyButton] {
+  --ey-size: var(--ey-size-xl);
+  --ey-padding: var(--ey-padding-l);
+  --ey-radius: var(--ey-radius-xl);
+  --ey-margin: var(--ey-margin-xl);
+  font: var(--ey-font-text-xl);
+}
 
-  &[data-size='l'] {
-    --ey-size: var(--ey-size-l);
-    --ey-padding: var(--ey-padding-l);
-    --ey-radius: var(--ey-radius-l);
-    --ey-margin: var(--ey-margin-l);
-
-    font: var(--ey-font-text-l);
-  }
-
-  &[data-size='xl'] {
-    --ey-size: var(--ey-size-xl);
-    --ey-padding: var(--ey-padding-l);
-    --ey-radius: var(--ey-radius-xl);
-    --ey-margin: var(--ey-margin-xl);
-
-    font: var(--ey-font-text-xl);
-  }
-
-  >.icon {
-    margin-left: 10px;
-    height: 1.5em;
-    width: auto;
-    color: white;
-    order: 10;
-  }
+[eyButton] > .icon {
+  margin-left: 10px;
+  height: 1.5rem;
+  width: auto;
+  color: white;
+  order: 10;
 }

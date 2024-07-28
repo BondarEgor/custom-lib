@@ -1,10 +1,13 @@
 <aside class='aside'>
 	<div class='container'>
+		<div class='sidebar-input'>
+			<ey-input placeholder="Search" ></ey-input>
+		</div>
 		<ey-accordion-item title="Getting started">
-			Getting started
+			<a class='link-item'  eyLink mode="info">Getting started</a>
 		</ey-accordion-item>
 		<ey-accordion-item title="Components">
-			<a class='link-item' *ngFor='let component of COMPONENTS' eyLink mode="info">{{component | titlecase}}</a>
+			<a [routerLink]="component" class='link-item' *ngFor='let component of COMPONENTS' eyLink mode="info">{{component | titlecase}}</a>
 		</ey-accordion-item>
 	</div>
 </aside>
