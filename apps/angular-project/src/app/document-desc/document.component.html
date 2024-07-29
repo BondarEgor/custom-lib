@@ -9,43 +9,16 @@
 			components to use them with native button and a elements.
 		</div>
 
-		<div class="usage">
-			<h2 class='usage-heading'>Usage</h2>
-			<div class='usage-examples'>
-				<div class='usage-example-header'>
-					<div class='preview'>Preview</div>
-					<div class='preview'>Typescript</div>
-					<div class='preview'>Html</div>
-					<div class='preview'>Less</div>
-				</div>
-				<div class="usage-showcase">
-					<div class='attr-example'>
-						button[eyButton]
-					</div>
-					<div class="btn-group">
-						<button *ngFor='let button of SHOWCASE_BUTTONS' eyButton appearance="primary"
-						[size]="button.size" disabled>Button</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="usage">
-			<h2 class='usage-heading'>Modes</h2>
-			<div class='usage-examples'>
-				<div class='usage-example-header'>
-					<div class='preview'>Preview</div>
-					<div class='preview'>Typescript</div>
-					<div class='preview'>Html</div>
-					<div class='preview'>Less</div>
-				</div>
-				<div class="usage-showcase">
-					<div class="btn-group">
-						<button *ngFor='let button of SHOWCASE_BUTTONS' eyButton [appearance]="button.appearance"
-						[size]="button.size">{{button.appearance | titlecase}}</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		<app-usage-example 
+		attrTitle='button[eyButton]' attrName='Usage'
+		></app-usage-example>
+		<app-usage-example
+		 attrName='Appearance' [isAppearanceNeeded]
+		 ='true'
+		 insideButtonText='Mode'
+		 ></app-usage-example>
+		<app-usage-example
+		insideButtonText='Size'
+		attrName='Size'></app-usage-example>
 	</div>
 </div>

@@ -6,6 +6,7 @@ import { AccordionItemComponent, ButtonDirective, CopyButtonComponent, ExpandCom
 import { DocumentPageComponent } from './document-desc/document.component'
 import { EyHeaderComponent } from "./header/header.component"
 import { EySidebarComponent } from './sidebar/sidebar.component'
+import { UsageExampleComponent } from './usage-example/usage-example.component'
 @Component({
   standalone: true,
   imports: [
