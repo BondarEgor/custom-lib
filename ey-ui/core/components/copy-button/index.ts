@@ -1,1 +1,1 @@
-export * from './copy.button.component'
+export * from './copy.button.component';

@@ -1,31 +1,33 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core'
-import { ButtonDirective } from '../button'
-import { ExpandComponent } from '../expand'
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
+import { ButtonDirective } from '../button';
+import { ExpandComponent } from '../expand';
 
 @Component({
-	templateUrl: './accordion-item.component.html',
-	styleUrl: './accordion-item.component.less',
-	standalone: true,
-	imports: [
-		ButtonDirective,
-		ExpandComponent
-	],
-	selector: 'ey-accordion-item',
-	changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './accordion-item.component.html',
+  styleUrl: './accordion-item.component.less',
+  standalone: true,
+  imports: [ButtonDirective, ExpandComponent],
+  selector: 'ey-accordion-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-
 export class AccordionItemComponent implements OnChanges {
-	@Input() title: string = ''
-	@Input() expanded: boolean = false
+  @Input() title = '';
+  @Input() expanded = false;
 
-	ngOnChanges(changes: SimpleChanges) {
-		if(changes['expanded']){
-			console.log('whastup')
-			this.expanded = changes['expanded'].currentValue
-		}
-	}
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['expanded']) {
+      console.log('whastup');
+      this.expanded = changes['expanded'].currentValue;
+    }
+  }
 
-	toggle() {
-		this.expanded = !this.expanded
-	}
+  toggle() {
+    this.expanded = !this.expanded;
+  }
 }

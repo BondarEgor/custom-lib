@@ -1,24 +1,19 @@
-<div class='document-wrapper'>
-	<div class='document-container'>
-		<div class='document-header'>
-			Button
-		</div>
+<div class="document-wrapper">
+  <div class="document-container">
+    <h1 class="document-header">Button</h1>
 
-		<div class="document-desc">
-			<code>EyButtonModule</code> is a module with components <code>eyButton</code> , <code>eyIconButton</code> are
-			components to use them with native button and a elements.
-		</div>
+    <div class="document-desc">
+      <code>EyButtonModule</code> is a module with components
+      <code>eyButton</code> , <code>eyIconButton</code> are components to use
+      them with native <code>button</code> and <code>a</code> elements.
+    </div>
 
-		<app-usage-example 
-		attrTitle='button[eyButton]' attrName='Usage'
-		></app-usage-example>
-		<app-usage-example
-		 attrName='Appearance' [isAppearanceNeeded]
-		 ='true'
-		 insideButtonText='Mode'
-		 ></app-usage-example>
-		<app-usage-example
-		insideButtonText='Size'
-		attrName='Size'></app-usage-example>
-	</div>
+    <app-usage-example
+      *ngFor="let item of ATTRIBUTES_LIST"
+      attrTitle="button[eyButton]"
+      [attrName]="item.title"
+      [isAppearanceNeeded]="item.isAppearanceNeeded"
+      [insideButtonText]="item.insideText"
+    ></app-usage-example>
+  </div>
 </div>

@@ -1,1 +1,1 @@
-export type EyMode = 'primary' | 'success' | 'warning' | 'error' | 'info'
+export type EyMode = 'primary' | 'success' | 'warning' | 'error' | 'info';

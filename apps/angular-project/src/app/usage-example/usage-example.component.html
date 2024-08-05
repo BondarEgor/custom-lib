@@ -1,20 +1,16 @@
 <div class="usage">
-	<h2 class='usage-heading'>{{attrName}}</h2>
-	<div class='usage-examples'>
-		<div class='usage-example-header'>
-			<div class='preview'>Preview</div>
-			<div class='preview'>Typescript</div>
-			<div class='preview'>Html</div>
-			<div class='preview'>Less</div>
-		</div>
-		<div class="usage-showcase">
-			<div class='attr-example'>
-				{{attrTitle}}
-			</div>
-			<div class="btn-group">
-				<button *ngFor='let button of SHOWCASE_BUTTONS' eyButton
-					[appearance]="isAppearanceNeeded ? button.appearance: 'primary'" [size]="button.size" disabled>{{insideButtonText}}</button>
-			</div>
-		</div>
-	</div>
+  <h2 class="h2">{{ attrName }}</h2>
+  <ey-showcase-block attribute="button[eyButton]">
+    <div class="btn-group">
+      <button
+        *ngFor="let button of SHOWCASE_BUTTONS"
+        eyButton
+        [appearance]="isAppearanceNeeded ? button.appearance : 'primary'"
+        [size]="button.size"
+        disabled
+      >
+        {{ insideButtonText }}
+      </button>
+    </div>
+  </ey-showcase-block>
 </div>
