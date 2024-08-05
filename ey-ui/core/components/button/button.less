@@ -5,14 +5,25 @@
   padding: var(--ey-padding);
   user-select: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   border: none;
+  height: var(--ey-height);
+}
+
+[data-size='xs'][eyButton] {
+  --ey-size: var(--ey-size-xs);
+  --ey-padding: var(--ey-padding-xs);
+  --ey-radius: var(--ey-radius-xs);
+  --ey-height: var(--ey-height-xs);
+  font: var(--ey-font-text-xs);
 }
 
 [data-size='s'][eyButton] {
   --ey-size: var(--ey-size-s);
   --ey-padding: var(--ey-padding-s);
   --ey-radius: var(--ey-radius-s);
-  --ey-margin: var(--ey-margin-s);
+  --ey-height: var(--ey-height-s);
   font: var(--ey-font-text-s);
 }
 
@@ -20,7 +31,8 @@
   --ey-size: var(--ey-size-m);
   --ey-padding: var(--ey-padding-m);
   --ey-radius: var(--ey-radius-m);
-  --ey-margin: var(--ey-margin-m);
+  --ey-height: var(--ey-height-m);
+
   font: var(--ey-font-text-m);
 }
 
@@ -28,7 +40,8 @@
   --ey-size: var(--ey-size-l);
   --ey-padding: var(--ey-padding-l);
   --ey-radius: var(--ey-radius-l);
-  --ey-margin: var(--ey-margin-l);
+  --ey-height: var(--ey-height-l);
+
   font: var(--ey-font-text-l);
 }
 
@@ -36,11 +49,12 @@
   --ey-size: var(--ey-size-xl);
   --ey-padding: var(--ey-padding-l);
   --ey-radius: var(--ey-radius-xl);
-  --ey-margin: var(--ey-margin-xl);
+  --ey-height: var(--ey-height-xl);
+
   font: var(--ey-font-text-xl);
 }
 
-[eyButton] > .icon {
+[eyButton]>.icon {
   margin-left: 10px;
   height: 1.5rem;
   width: auto;

@@ -29,11 +29,11 @@ interface IEyButton {
 })
 export class UsageExampleComponent {
   SHOWCASE_BUTTONS: IEyButton[] = [
+    { appearance: 'flat', size: 'xs' },
     { appearance: 'orange', size: 's' },
     { appearance: 'violet', size: 'm' },
     { appearance: 'blue', size: 'l' },
     { appearance: 'outlined', size: 'xl' },
-    { appearance: 'flat', size: 'xl' },
   ];
 
   @Input() attrName!: string
