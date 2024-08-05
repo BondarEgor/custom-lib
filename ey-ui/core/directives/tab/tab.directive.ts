@@ -4,8 +4,8 @@ import {
   Directive,
   Input,
   ViewEncapsulation,
-} from '@angular/core';
-import { eyWithStyles } from '@ey-ui/cdk';
+} from '@angular/core'
+import { eyWithStyles } from '@ey-ui/cdk'
 
 @Component({
   standalone: true,
@@ -14,7 +14,7 @@ import { eyWithStyles } from '@ey-ui/cdk';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EyTabStyles {}
+export class EyTabStyles { }
 
 @Directive({
   selector: '[eyTab]',
@@ -24,9 +24,9 @@ export class EyTabStyles {}
     '[class.disabled]': 'disabled',
   },
 })
-export class EyTabDirective {
-  @Input() active!: boolean;
-  @Input() disabled!: boolean;
+export class EyTabDirectiveComponent {
+  @Input() active!: boolean
+  @Input() disabled!: boolean
 
   private readonly nothing = eyWithStyles(EyTabStyles);
 }

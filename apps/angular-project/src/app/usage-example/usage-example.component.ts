@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
 import {
-  ButtonDirective,
+  EyButtonDirective,
   EyShowcaseBlock,
   EyTabsComponent
 } from '@ey-ui/core'
@@ -20,7 +20,7 @@ interface IEyButton {
   styleUrl: './usage-example.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    ButtonDirective,
+    EyButtonDirective,
     CommonModule,
     EyTabsComponent,
     EyLinkStyles,

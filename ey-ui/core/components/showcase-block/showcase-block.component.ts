@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EyTabsComponent } from '../tabs';
 import { CommonModule } from '@angular/common';
 import { EyShowcaseInner } from '../showcase-inner/showcase-inner.component';
@@ -9,6 +9,7 @@ import { EyShowcaseInner } from '../showcase-inner/showcase-inner.component';
   standalone: true,
   templateUrl: './showcase-block.component.html',
   styleUrl: './showcase-block.component.less',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EyShowcaseBlock {
   @Input() attribute = '';

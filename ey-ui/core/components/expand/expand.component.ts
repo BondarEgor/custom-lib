@@ -1,12 +1,12 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'
 import {
   ChangeDetectionStrategy,
   Component,
   Input,
   OnChanges,
   SimpleChanges,
-} from '@angular/core';
-import { expandCollapse } from '@ey-ui/cdk';
+} from '@angular/core'
+import { expandCollapse } from '@ey-ui/cdk'
 @Component({
   templateUrl: './expand.component.html',
   styleUrls: ['./expand.component.less'],
@@ -16,12 +16,12 @@ import { expandCollapse } from '@ey-ui/cdk';
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ExpandComponent implements OnChanges {
+export class EyExpandComponent implements OnChanges {
   @Input() expanded = false;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['expanded']) {
-      this.expanded = changes['expanded'].currentValue;
+      this.expanded = changes['expanded'].currentValue
     }
   }
 }

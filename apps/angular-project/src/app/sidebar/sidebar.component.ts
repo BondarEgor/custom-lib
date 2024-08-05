@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { RouterModule } from '@angular/router'
 import {
-  AccordionItemComponent,
-  InputComponent,
-  LinkDirective,
-} from '@ey-ui/core';
-import { ExpandComponent } from '../../../../../ey-ui/core/components/expand/expand.component';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+  EyAccordionItemComponent,
+  EyInputComponent,
+  EyLinkDirectiveComponent,
+  EyExpandComponent
+} from '@ey-ui/core'
 
 @Component({
   standalone: true,
@@ -14,13 +14,14 @@ import { RouterModule } from '@angular/router';
   selector: 'ey-sidebar',
   styleUrl: './sidebar.component.less',
   imports: [
-    AccordionItemComponent,
-    ExpandComponent,
-    LinkDirective,
+    EyAccordionItemComponent,
+    EyExpandComponent,
+    EyLinkDirectiveComponent,
     CommonModule,
     RouterModule,
-    InputComponent,
+    EyInputComponent,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EySidebarComponent {
   COMPONENTS = ['button', 'tooltip', 'link', 'expand'];

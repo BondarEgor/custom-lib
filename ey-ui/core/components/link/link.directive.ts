@@ -4,9 +4,9 @@ import {
   Directive,
   Input,
   ViewEncapsulation,
-} from '@angular/core';
-import { eyWithStyles } from 'ey-ui/cdk/utils';
-import { EyMode } from '../../../types/link/eyMode';
+} from '@angular/core'
+import { eyWithStyles } from 'ey-ui/cdk/utils'
+import { EyMode } from '../../../types/link/eyMode'
 @Component({
   standalone: true,
   selector: 'ey-list-styles',
@@ -15,7 +15,7 @@ import { EyMode } from '../../../types/link/eyMode';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EyLinkStyles {}
+export class EyLinkStyles { }
 
 @Directive({
   standalone: true,
@@ -24,7 +24,7 @@ export class EyLinkStyles {}
     '[attr.mode]': 'mode',
   },
 })
-export class LinkDirective {
+export class EyLinkDirectiveComponent {
   @Input()
   public mode: EyMode = 'primary';
 

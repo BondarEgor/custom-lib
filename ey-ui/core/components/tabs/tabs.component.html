@@ -1,10 +1,5 @@
 <div class="ey-tabs">
-  <button
-    (click)="setActiveTab(item, $event)"
-    eyTab
-    [active]="activeTab === item"
-    *ngFor="let item of TABS"
-  >
+  <button (click)="setActiveTab(item)" eyTab [active]="activeTab === item" *ngFor="let item of TABS">
     {{ item | titlecase }}
   </button>
 </div>

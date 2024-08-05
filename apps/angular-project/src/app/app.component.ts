@@ -1,38 +1,38 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'
 import {
   ChangeDetectionStrategy,
   Component,
   Renderer2,
   inject,
-} from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+} from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router'
 import {
-  AccordionItemComponent,
-  ButtonDirective,
-  CopyButtonComponent,
-  ExpandComponent,
-  LinkDirective,
+  EyAccordionItemComponent,
+  EyButtonDirective,
+  EyCopyButtonComponent,
+  EyExpandComponent,
+  EyLinkDirectiveComponent,
   TooltipDirective,
-} from '@ey-ui/core';
-import { DocumentPageComponent } from './document-desc/document.component';
-import { EyHeaderComponent } from './header/header.component';
-import { EySidebarComponent } from './sidebar/sidebar.component';
+} from '@ey-ui/core'
+import { DocumentPageComponent } from './document-desc/document.component'
+import { EyHeaderComponent } from './header/header.component'
+import { EySidebarComponent } from './sidebar/sidebar.component'
 
 @Component({
   standalone: true,
   imports: [
     RouterModule,
-    ButtonDirective,
-    ExpandComponent,
-    CopyButtonComponent,
+    EyButtonDirective,
+    EyExpandComponent,
+    EyCopyButtonComponent,
     CommonModule,
     FormsModule,
-    LinkDirective,
+    EyLinkDirectiveComponent,
     TooltipDirective,
     EySidebarComponent,
     EyHeaderComponent,
-    AccordionItemComponent,
+    EyAccordionItemComponent,
     DocumentPageComponent,
   ],
   selector: 'app-root',
@@ -46,7 +46,7 @@ export class AppComponent {
   textFromInput = '';
 
   onClick() {
-    this.isExpanded = !this.isExpanded;
+    this.isExpanded = !this.isExpanded
   }
 
   copyIcon = '/custom-lib/ey-ui/cdk/assets/link.svg';

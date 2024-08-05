@@ -1,11 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { LinkDirective } from '../link';
-import { EyTabDirective } from '../tab/tab.directive';
+import { CommonModule } from '@angular/common'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { EyTabDirectiveComponent } from '../../directives/tab/tab.directive'
+import { EyLinkDirectiveComponent } from '../link'
 
 @Component({
   selector: 'ey-tabs',
-  imports: [LinkDirective, CommonModule, EyTabDirective],
+  imports: [
+    EyLinkDirectiveComponent, CommonModule, EyTabDirectiveComponent],
   standalone: true,
   templateUrl: './tabs.component.html',
   styleUrl: './tabs.component.less',
@@ -17,6 +18,6 @@ export class EyTabsComponent {
   activeTab = this.TABS[0];
 
   setActiveTab(tab: string) {
-    this.activeTab = tab;
+    this.activeTab = tab
   }
 }

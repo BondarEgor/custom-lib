@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { EyShowcaseHeaderComponent } from '../showcase-header'
 
 @Component({
@@ -7,5 +7,6 @@ import { EyShowcaseHeaderComponent } from '../showcase-header'
   templateUrl: './showcase-inner.component.html',
   styleUrl: './showcase-inner.component.less',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EyShowcaseInner { }
