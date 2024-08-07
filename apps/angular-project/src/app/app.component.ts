@@ -1,12 +1,7 @@
-import { CommonModule } from '@angular/common'
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Renderer2,
-  inject,
-} from '@angular/core'
-import { FormsModule } from '@angular/forms'
-import { RouterModule } from '@angular/router'
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Renderer2, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import {
   EyAccordionItemComponent,
   EyButtonDirective,
@@ -14,10 +9,10 @@ import {
   EyExpandComponent,
   EyLinkDirectiveComponent,
   TooltipDirective,
-} from '@ey-ui/core'
-import { DocumentPageComponent } from './document-desc/document.component'
-import { EyHeaderComponent } from './header/header.component'
-import { EySidebarComponent } from './sidebar/sidebar.component'
+} from '@ey-ui/core';
+import { DocumentPageComponent } from './document-desc/document.component';
+import { EyHeaderComponent } from './header/header.component';
+import { EySidebarComponent } from './sidebar/sidebar.component';
 
 @Component({
   standalone: true,
@@ -46,7 +41,7 @@ export class AppComponent {
   textFromInput = '';
 
   onClick() {
-    this.isExpanded = !this.isExpanded
+    this.isExpanded = !this.isExpanded;
   }
 
   copyIcon = '/custom-lib/ey-ui/cdk/assets/link.svg';

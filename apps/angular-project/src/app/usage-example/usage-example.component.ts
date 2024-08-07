@@ -1,16 +1,16 @@
-import { CommonModule } from '@angular/common'
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
-import {
-  EyButtonDirective,
-  EyShowcaseBlock,
-  EyTabsComponent
-} from '@ey-ui/core'
-import { EyButtonAppearance, EyButtonSize } from '@ey-ui/types'
-import { EyLinkStyles } from '../../../../../ey-ui/core/components/link/link.directive'
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { EyButtonDirective, EyShowcaseBlockComponent, EyTabsComponent } from '@ey-ui/core';
+import { EyButtonSize } from '@ey-ui/types';
+import { EyLinkStyles } from '../../../../../ey-ui/core/components/link/link.directive';
+import { EyShowcaseHeaderComponent } from '../../../../../ey-ui/core/components/showcase-header/showcase-header';
 
-interface IEyButton {
-  appearance: EyButtonAppearance
-  size: EyButtonSize
+interface IShowcaseItemBtn {
+  title: string;
+  insideText: string;
+  attrName: string;
+  size: EyButtonSize;
+  appearance: string;
 }
 
 @Component({
@@ -24,19 +24,10 @@ interface IEyButton {
     CommonModule,
     EyTabsComponent,
     EyLinkStyles,
-    EyShowcaseBlock,
+    EyShowcaseBlockComponent,
+    EyShowcaseHeaderComponent,
   ],
 })
 export class UsageExampleComponent {
-  SHOWCASE_BUTTONS: IEyButton[] = [
-    { appearance: 'flat', size: 'xs' },
-    { appearance: 'orange', size: 's' },
-    { appearance: 'violet', size: 'm' },
-    { appearance: 'blue', size: 'l' },
-    { appearance: 'outlined', size: 'xl' },
-  ];
-
-  @Input() attrName!: string
-  @Input() isAppearanceNeeded = false;
-  @Input() insideButtonText = 'Button';
+  @Input() showcaseItem!: any;
 }

@@ -1,19 +1,12 @@
 import type { Type } from '@angular/core';
-import {
-  createComponent,
-  DestroyRef,
-  EnvironmentInjector,
-  inject,
-} from '@angular/core';
+import { createComponent, DestroyRef, EnvironmentInjector, inject } from '@angular/core';
 
 import { eyCreateTokenFromFactory } from './create-token';
 
 const MAP = eyCreateTokenFromFactory(() => {
   const map = new Map();
 
-  inject(DestroyRef).onDestroy(() =>
-    map.forEach((component) => component.destroy())
-  );
+  inject(DestroyRef).onDestroy(() => map.forEach((component) => component.destroy()));
 
   return map;
 });

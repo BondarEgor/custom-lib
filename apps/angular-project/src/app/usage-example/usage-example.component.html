@@ -1,16 +1,5 @@
 <div class="usage">
-  <h2 class="h2">{{ attrName }}</h2>
-  <ey-showcase-block attribute="button[eyButton]">
-    <div class="btn-group">
-      <button
-        *ngFor="let button of SHOWCASE_BUTTONS"
-        eyButton
-        [appearance]="isAppearanceNeeded ? button.appearance : 'primary'"
-        [size]="button.size"
-        disabled
-      >
-        {{ insideButtonText }}
-      </button>
-    </div>
+  <h2 class="h2">{{ showcaseItem.title }}</h2>
+  <ey-showcase-block [attribute]="''">
   </ey-showcase-block>
 </div>

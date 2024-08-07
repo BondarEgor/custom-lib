@@ -12,9 +12,39 @@ import { UsageExampleComponent } from '../usage-example/usage-example.component'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DocumentPageComponent {
-  ATTRIBUTES_LIST = [
-    { title: 'Usage', isAppearanceNeeded: false, insideText: 'Button' },
-    { title: 'Appearance', isAppearanceNeeded: true, insideText: 'Color' },
-    { title: 'Size', isAppearanceNeeded: false, insideText: 'Size' },
+  readonly ATTRIBUTES_LIST = [
+    {
+      title: 'Usage',
+      attrName: '[eyButton]',
+      buttons: [
+        { insideText: 'Button', appearance: 'primary', size: 'l' },
+        { insideText: 'Disabled', appearance: 'primary', size: 'l', disabled: true },
+        { insideText: 'Disabled', appearance: 'primary', size: 'l', disabled: true },
+        { insideText: 'Disabled', appearance: 'primary', size: 'l', disabled: true },
+        { insideText: 'Disabled', appearance: 'primary', size: 'l', disabled: true },
+      ],
+    },
+    {
+      title: 'Appearance',
+      attrName: '[appearance]',
+      buttons: [
+        { insideText: 'orange', appearance: 'orange', size: 'l' },
+        { insideText: 'violet', appearance: 'violet', size: 'l' },
+        { insideText: 'blue', appearance: 'blue', size: 'l' },
+        { insideText: 'flat', appearance: 'flat', size: 'l' },
+        { insideText: 'outlined', appearance: 'outlined', size: 'l' },
+      ],
+    },
+    {
+      title: 'Size',
+      attrName: '[size]',
+      buttons: [
+        { insideText: 'SIZE_XS', appearance: 'primary', size: 'xs' },
+        { insideText: 'SIZE_S', appearance: 'primary', size: 's' },
+        { insideText: 'SIZE_M', appearance: 'primary', size: 'm' },
+        { insideText: 'SIZE_L', appearance: 'primary', size: 'l' },
+        { insideText: 'SIZE_XL', appearance: 'primary', size: 'xl' },
+      ],
+    },
   ];
 }

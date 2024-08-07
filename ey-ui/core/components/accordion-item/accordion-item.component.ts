@@ -1,12 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnChanges,
-  SimpleChanges,
-} from '@angular/core'
-import { EyButtonDirective } from '../button'
-import { EyExpandComponent } from '../expand'
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { EyButtonDirective } from '../button';
+import { EyExpandComponent } from '../expand';
 
 @Component({
   templateUrl: './accordion-item.component.html',
@@ -22,12 +16,12 @@ export class EyAccordionItemComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['expanded']) {
-      console.log('whastup')
-      this.expanded = changes['expanded'].currentValue
+      console.log('whastup');
+      this.expanded = changes['expanded'].currentValue;
     }
   }
 
   toggle() {
-    this.expanded = !this.expanded
+    this.expanded = !this.expanded;
   }
 }

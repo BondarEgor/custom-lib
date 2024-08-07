@@ -23,7 +23,7 @@ export class TooltipDirective {
     private componentFactoryResolver: ComponentFactoryResolver,
     private injector: Injector,
     @Inject(DOCUMENT) private document: Document,
-    private appRef: ApplicationRef
+    private appRef: ApplicationRef,
   ) {}
 
   @Input() eyTooltip = '';
@@ -40,9 +40,7 @@ export class TooltipDirective {
 
     this.tooltipComponent = tooltipComponentFactory.create(this.injector);
 
-    this.document.body.appendChild(
-      this.tooltipComponent.location.nativeElement
-    );
+    this.document.body.appendChild(this.tooltipComponent.location.nativeElement);
 
     this.setTooltipComponentProperties();
     this.tooltipComponent.hostView.detectChanges();
@@ -65,8 +63,7 @@ export class TooltipDirective {
     }
 
     this.tooltipComponent.instance.text = this.eyTooltip;
-    const { left, right, bottom } =
-      this.el.nativeElement.getBoundingClientRect();
+    const { left, right, bottom } = this.el.nativeElement.getBoundingClientRect();
 
     this.tooltipComponent.instance.left = (right - left) / 2 + left;
     this.tooltipComponent.instance.top = bottom;

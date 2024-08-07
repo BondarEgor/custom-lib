@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core'
-import { ClipboardService } from 'ngx-clipboard'
-import { EyButtonDirective } from '../button'
+import { ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { ClipboardService } from 'ngx-clipboard';
+import { EyButtonDirective } from '../button';
 
 @Component({
   standalone: true,
@@ -11,23 +11,23 @@ import { EyButtonDirective } from '../button'
     '(click)': 'onCopy()',
   },
   imports: [EyButtonDirective],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EyCopyButtonComponent {
-  constructor(private clipboard: ClipboardService) { }
+  constructor(private clipboard: ClipboardService) {}
 
   readonly copyIcon = '/copy.svg';
-  @ViewChild('tooltip') tooltip!: ElementRef
+  @ViewChild('tooltip') tooltip!: ElementRef;
 
   @Input()
-  public textToCopy!: string
+  public textToCopy!: string;
 
   onCopy() {
-    this.clipboard.copy(this.textToCopy)
-    this.tooltip.nativeElement.textContent = 'Скопировано'
+    this.clipboard.copy(this.textToCopy);
+    this.tooltip.nativeElement.textContent = 'Скопировано';
 
     setTimeout(() => {
-      this.tooltip.nativeElement.textContent = 'Копировать'
-    }, 2000)
+      this.tooltip.nativeElement.textContent = 'Копировать';
+    }, 2000);
   }
 }

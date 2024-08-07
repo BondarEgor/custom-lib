@@ -54,10 +54,15 @@
   font: var(--ey-font-text-xl);
 }
 
-[eyButton]>.icon {
+[eyButton] > .icon {
   margin-left: 10px;
   height: 1.5rem;
   width: auto;
   color: white;
   order: 10;
+}
+
+[eyButton][disabled] {
+  pointer-events: none;
+  opacity: 0.5;
 }
