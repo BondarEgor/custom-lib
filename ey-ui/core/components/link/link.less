@@ -1,0 +1,34 @@
+@import '../../styles/ey-styles.local.less';
+
+[eyLink] {
+  background-color: transparent;
+  cursor: pointer;
+  transition: all ease 0.4s;
+  display: block;
+  text-decoration: none;
+  height: 100%;
+
+  :hover& {
+    opacity: 0.5;
+  }
+
+  &[mode='primary'] {
+    color: lightskyblue;
+  }
+
+  &[mode='success'] {
+    color: green;
+  }
+
+  &[mode='warning'] {
+    color: orange;
+  }
+
+  &[mode='error'] {
+    color: lightcoral;
+  }
+
+  &[mode='info'] {
+    color: #ececec;
+  }
+}

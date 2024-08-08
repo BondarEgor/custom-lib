@@ -1,17 +1,48 @@
-import { Component } from '@angular/core'
-import { RouterModule } from '@angular/router'
-import { ExpandComponent, MyButtonDirective } from '@ey-ui/core'
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Renderer2, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import {
+  EyAccordionItemComponent,
+  EyButtonDirective,
+  EyCopyButtonComponent,
+  EyExpandComponent,
+  EyLinkDirectiveComponent,
+  TooltipDirective,
+} from '@ey-ui/core';
+import { DocumentPageComponent } from './document-desc/document.component';
+import { EyHeaderComponent } from './header/header.component';
+import { EySidebarComponent } from './sidebar/sidebar.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, MyButtonDirective, ExpandComponent],
+  imports: [
+    RouterModule,
+    EyButtonDirective,
+    EyExpandComponent,
+    EyCopyButtonComponent,
+    CommonModule,
+    FormsModule,
+    EyLinkDirectiveComponent,
+    TooltipDirective,
+    EySidebarComponent,
+    EyHeaderComponent,
+    EyAccordionItemComponent,
+    DocumentPageComponent,
+  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.less',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  isExpanded = false
-  onClick(){
-    this.isExpanded = !this.isExpanded
+  renderer = inject(Renderer2);
+  isExpanded = false;
+  textFromInput = '';
+
+  onClick() {
+    this.isExpanded = !this.isExpanded;
   }
- }
+
+  copyIcon = '/custom-lib/ey-ui/cdk/assets/link.svg';
+}

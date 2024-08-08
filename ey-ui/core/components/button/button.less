@@ -1,9 +1,5 @@
-@import '../../styles/ey-styles.local.less';
-
 [eyButton] {
   --ey-gap: 0.125rem;
-
-  height: var(--ey-height-m);
   justify-content: center;
   border-radius: var(--ey-radius);
   padding: var(--ey-padding);
@@ -12,40 +8,61 @@
   display: flex;
   align-items: center;
   border: none;
+  height: var(--ey-height);
+}
 
-  &[data-size='s'] {
-    --ey-size: var(--ey-size-s);
-    --ey-padding: var(--ey-padding-s);
-    --ey-radius: var(--ey-radius-s);
-    --ey-margin: var(--ey-margin-s);
+[data-size='xs'][eyButton] {
+  --ey-size: var(--ey-size-xs);
+  --ey-padding: var(--ey-padding-xs);
+  --ey-radius: var(--ey-radius-xs);
+  --ey-height: var(--ey-height-xs);
+  font: var(--ey-font-text-xs);
+}
 
-    font: var(--ey-font-text-s);
-  }
+[data-size='s'][eyButton] {
+  --ey-size: var(--ey-size-s);
+  --ey-padding: var(--ey-padding-s);
+  --ey-radius: var(--ey-radius-s);
+  --ey-height: var(--ey-height-s);
+  font: var(--ey-font-text-s);
+}
 
-  &[data-size='m'] {
-    --ey-size: var(--ey-size-m);
-    --ey-padding: var(--ey-padding-m);
-    --ey-radius: var(--ey-radius-m);
-    --ey-margin: var(--ey-margin-m);
+[data-size='m'][eyButton] {
+  --ey-size: var(--ey-size-m);
+  --ey-padding: var(--ey-padding-m);
+  --ey-radius: var(--ey-radius-m);
+  --ey-height: var(--ey-height-m);
 
-    font: var(--ey-font-text-m);
-  }
+  font: var(--ey-font-text-m);
+}
 
-  &[data-size='l'] {
-    --ey-size: var(--ey-size-l);
-    --ey-padding: var(--ey-padding-l);
-    --ey-radius: var(--ey-radius-l);
-    --ey-margin: var(--ey-margin-l);
+[data-size='l'][eyButton] {
+  --ey-size: var(--ey-size-l);
+  --ey-padding: var(--ey-padding-l);
+  --ey-radius: var(--ey-radius-l);
+  --ey-height: var(--ey-height-l);
 
-    font: var(--ey-font-text-l);
-  }
+  font: var(--ey-font-text-l);
+}
 
-  &[data-size='xl'] {
-    --ey-size: var(--ey-size-xl);
-    --ey-padding: var(--ey-padding-xl);
-    --ey-radius: var(--ey-radius-xl);
-    --ey-margin: var(--ey-margin-xl);
+[data-size='xl'][eyButton] {
+  --ey-size: var(--ey-size-xl);
+  --ey-padding: var(--ey-padding-l);
+  --ey-radius: var(--ey-radius-xl);
+  --ey-height: var(--ey-height-xl);
 
-    font: var(--ey-font-text-xl);
-  }
+  font: var(--ey-font-text-xl);
+}
+
+[eyButton] > .icon {
+  margin-left: 10px;
+  height: 1.5rem;
+  width: auto;
+  color: white;
+  order: 10;
+}
+
+[eyButton][disabled] {
+  pointer-events: none;
+  opacity: 0.5;
 }

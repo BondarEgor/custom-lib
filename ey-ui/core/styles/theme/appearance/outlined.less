@@ -1,0 +1,22 @@
+[data-appearance='outlined'] {
+  --ey-bg: var(--ey-bg-outlined);
+
+  transition: all 0.3s ease;
+  background: var(--ey-bg);
+  color: var(--ey-text-primary-on-accent-1);
+  border: 1px solid var(--border-color) !important;
+
+  &:hover {
+    --ey-bg: var(--ey-bg-outlined-hover);
+
+    background: var(--ey-bg);
+    color: var(--ey-text-primary-on-accent-1);
+  }
+
+  &:active {
+    --ey-bg: var(--ey-bg-outlined-pressed);
+
+    background: var(--ey-bg);
+    color: var(--ey-text-primary-on-accent-1);
+  }
+}

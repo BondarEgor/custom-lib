@@ -3,11 +3,9 @@
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
+      "parser": "@angular-eslint/template-parser",
       "files": ["*.ts"],
-      "extends": [
-        "plugin:@nx/angular",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ],
+      "extends": ["plugin:@nx/angular", "plugin:@angular-eslint/template/process-inline-templates"],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",

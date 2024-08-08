@@ -1,19 +1,17 @@
 import { ExistingProvider, ProviderToken } from '@angular/core';
-import { eyCreateToken, eyProvide } from '../../../cdk/utils';
+import { eyCreateToken, eyProvide } from '@ey-ui/cdk';
 export interface EyAppearanceOptions {
   readonly appearance: string;
 }
 
 export const EY_APPEARANCE_DEFAULT_OPTION: EyAppearanceOptions = {
-  appearance: '',
+  appearance: 'primary',
 };
 
-export const EY_APPEARANCE_OPTIONS = eyCreateToken(
-  EY_APPEARANCE_DEFAULT_OPTION
-);
+export const EY_APPEARANCE_OPTIONS = eyCreateToken(EY_APPEARANCE_DEFAULT_OPTION);
 
 export function eyAppearanceOptionsProvider(
-  token: ProviderToken<EyAppearanceOptions>
+  token: ProviderToken<EyAppearanceOptions>,
 ): ExistingProvider {
   return eyProvide(EY_APPEARANCE_OPTIONS, token);
 }

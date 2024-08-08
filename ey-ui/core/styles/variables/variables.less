@@ -1,5 +1,5 @@
-@font-fallback: -apple-system, 'BlinkMacSystemFont', system-ui, 'Roboto',
-  'Segoe UI', 'Helvetica Neue', sans-serif;
+@font-fallback: -apple-system, 'BlinkMacSystemFont', system-ui, 'Roboto', 'Segoe UI',
+  'Helvetica Neue', sans-serif;
 
 &:root {
   // Fonts
@@ -25,6 +25,9 @@
   --ey-bg-violet: #8a2be2;
   --ey-bg-violet-hover: #6b21a8;
   --ey-bg-violet-pressed: #481675;
+  --ey-bg-outlined: transparent;
+  --ey-bg-outlined-hover: var(--border-color);
+  --ey-bg-outlined-pressed: #312f2f;
   //Shapes
   --ey-border-rounded: 0.625rem;
   --ey-border-square: 0.2rem;
@@ -33,7 +36,7 @@
   --ey-padding-s: 0.75rem;
   --ey-padding-m: 1rem;
   --ey-padding-l: 1.25rem;
-  --ey-padding-xl: 2rem;
+  --ey-padding-xl: 1.5rem;
 
   //Fonts sizes
   --ey-font-text-xl: normal 1.1875rem/1.75rem var(--ey-font-text);
@@ -69,9 +72,10 @@
   --ey-height-l: 3.5rem;
 
   // Input padding
+  --ey-padding-xs: 0.75rem;
   --ey-padding-s: 0.75rem;
   --ey-padding-m: 0.75rem;
-  --ey-padding-l: 1rem;
+  --ey-padding-l: 1.25rem;
 
   //Text
   --ey-text-primary: rgba(27, 31, 59, 1);

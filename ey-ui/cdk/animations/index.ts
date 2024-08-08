@@ -1,1 +1,1 @@
-export * from './expand.animation'
+export * from './expand.animation';

@@ -1,0 +1,11 @@
+<div class="accordion-item">
+  <button class="accordion-btn" (click)="toggle()">
+    <span>{{ title }}</span>
+    <span>
+      <i class="fa-solid fa-chevron-{{ expanded ? 'up' : 'down' }}"></i>
+    </span>
+  </button>
+  <ey-expand class="expander" [expanded]="expanded">
+    <ng-content class="item-content"></ng-content>
+  </ey-expand>
+</div>
