@@ -1,2 +1,1 @@
-export * from './showcase-block.component'
-
+export * from './showcase-block.component';

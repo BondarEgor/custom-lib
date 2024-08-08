@@ -1,1 +1,1 @@
-export * from './button-ts.component'
+export * from './button-ts.component';

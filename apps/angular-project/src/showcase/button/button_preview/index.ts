@@ -1,1 +1,1 @@
-export * from './button-preview.component'
+export * from './button-preview.component';

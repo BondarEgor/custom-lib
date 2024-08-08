@@ -9,9 +9,9 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "baseUrl":"./",
-  "path":{
-    "@showcase/*":"showcase/*"
+  "baseUrl": "./",
+  "path": {
+    "@showcase/*": "showcase/*"
   },
   "files": [],
   "include": [],

@@ -14,13 +14,13 @@
   "lint-staged": {
     "*.ts": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write ."
     ],
     "*.scss": [
       "stylelint --fix"
     ],
     "*.json": [
-      "prettier --write"
+      "prettier --write ."
     ]
   },
   "private": true,

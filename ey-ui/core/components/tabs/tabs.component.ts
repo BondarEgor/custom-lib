@@ -1,8 +1,8 @@
-import { CommonModule } from '@angular/common'
-import { ChangeDetectionStrategy, Component, Output } from '@angular/core'
-import { EyTabDirectiveComponent } from '../../directives/tab/tab.directive'
-import { EyLinkDirectiveComponent } from '../link'
-import { EventEmitter } from '@angular/core'
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Output } from '@angular/core';
+import { EyTabDirectiveComponent } from '../../directives/tab/tab.directive';
+import { EyLinkDirectiveComponent } from '../link';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ey-tabs',
@@ -17,10 +17,10 @@ export class EyTabsComponent {
 
   activeTab = this.TABS[0];
 
-  @Output() tabChange = new EventEmitter<string>()
+  @Output() tabChange = new EventEmitter<string>();
 
   setActiveTab(tab: string) {
-    this.activeTab = tab
-    this.tabChange.emit(tab)
+    this.activeTab = tab;
+    this.tabChange.emit(tab);
   }
 }

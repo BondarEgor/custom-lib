@@ -19,7 +19,7 @@
       "@ey-ui/core": ["./ey-ui/core"],
       "@ey-ui/types": ["./ey-ui/types"],
       "@ey-ui/utils": ["./ey-ui/utils"],
-      "@ey-ui/showcase": ["./ey-ui/showcase"],
+      "@ey-ui/showcase": ["./ey-ui/showcase"]
     }
   },
   "exclude": ["node_modules", "tmp"]

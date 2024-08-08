@@ -1,1 +1,1 @@
-export * from './button-less.component'
+export * from './button-less.component';

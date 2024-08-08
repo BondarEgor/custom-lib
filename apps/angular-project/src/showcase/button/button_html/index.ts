@@ -1,1 +1,1 @@
-export * from './button-html.component'
+export * from './button-html.component';
