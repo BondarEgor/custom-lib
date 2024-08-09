@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Renderer2, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common'
+import { ChangeDetectionStrategy, Component, Renderer2, inject } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router'
 import {
   EyAccordionItemComponent,
   EyButtonDirective,
@@ -9,10 +9,12 @@ import {
   EyExpandComponent,
   EyLinkDirectiveComponent,
   TooltipDirective,
-} from '@ey-ui/core';
-import { DocumentPageComponent } from './document-desc/document.component';
-import { EyHeaderComponent } from './header/header.component';
-import { EySidebarComponent } from './sidebar/sidebar.component';
+} from '@ey-ui/core'
+import { DocumentPageComponent } from './document-desc/document.component'
+import { EyHeaderComponent } from './header/header.component'
+import { EySidebarComponent } from './sidebar/sidebar.component'
+import { HIGHLIGHT_OPTIONS, HighlightLoader } from 'ngx-highlightjs'
+import { HighlightService } from './services/highlight.service'
 
 @Component({
   standalone: true,
@@ -30,18 +32,25 @@ import { EySidebarComponent } from './sidebar/sidebar.component';
     EyAccordionItemComponent,
     DocumentPageComponent,
   ],
+  providers:[HighlightService],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
+  private hljsLoader: HighlightLoader = inject(HighlightLoader);
+
+  onAppThemeChange(appTheme: 'dark' | 'light') {
+    this.hljsLoader.setTheme(appTheme === 'dark' ? 'assets/styles/solarized-dark.css' : 'assets/styles/solarized-light.css')
+  }
+
   renderer = inject(Renderer2);
   isExpanded = false;
   textFromInput = '';
 
   onClick() {
-    this.isExpanded = !this.isExpanded;
+    this.isExpanded = !this.isExpanded
   }
 
   copyIcon = '/custom-lib/ey-ui/cdk/assets/link.svg';

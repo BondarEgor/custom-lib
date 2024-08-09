@@ -1,5 +1,9 @@
 <div class="btn-group">
-  <button *ngFor="let button of buttons" eyButton [disabled]="button.disabled">
+  <button class='show-button' *ngFor="let button of buttons" eyButton 
+  [disabled]="button.disabled"
+  [appearance]="button.appearance"
+  [size]='button.size'
+  >
     {{ button.insideText }}
   </button>
 </div>

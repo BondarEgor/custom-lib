@@ -18,8 +18,8 @@ interface IButtonArray {
 export class ButtonService {
   getButtonsList(attr_name: string) {
     const attribute = ATTRIBUTES_LIST.find((item) => item.title === attr_name);
-
-    return attribute ? attribute.buttons : null;
+    
+    return attribute ? attribute : null;
   }
 
   getAttributeNames() {

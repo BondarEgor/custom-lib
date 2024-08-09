@@ -1,14 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { EyShowcaseHeaderComponent } from '../showcase-header';
-import { EyShowcaseInner } from '../showcase-inner/showcase-inner.component';
-import { EyTabsComponent } from '../tabs';
+import { CommonModule } from '@angular/common'
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
+import { EyShowcaseHeaderComponent } from '../showcase-header'
+import { EyShowcaseInner } from '../showcase-inner/showcase-inner.component'
+import { EyTabsComponent } from '../tabs'
 import {
   ButtonTsComponent,
   ButtonLessComponent,
   ButtonPreviewComponent,
   ButtonHtmlComponent,
-} from '../../../../apps/angular-project/src/showcase/button/';
+} from '../../../../apps/angular-project/src/showcase/button/'
 
 @Component({
   imports: [
@@ -20,7 +20,7 @@ import {
     ButtonLessComponent,
     EyTabsComponent,
     ButtonTsComponent,
-    ButtonPreviewComponent,
+    ButtonPreviewComponent
   ],
   selector: 'ey-showcase-block',
   standalone: true,
@@ -31,9 +31,12 @@ import {
 export class EyShowcaseBlockComponent {
   @Input() attribute = '';
 
-  activeTab: string = 'PREVIEW';
+  @Input() showcaseItem: any
+  activeTab: string = 'Preview';
+
+  readonly tabs = ['Preview', 'Typescript', 'HTML', 'LESS'];
 
   setActiveTab(tab: string) {
-    this.activeTab = tab;
+    this.activeTab = tab
   }
 }

@@ -4,8 +4,8 @@
     (click)="setActiveTab(item)"
     eyTab
     [active]="activeTab === item"
-    *ngFor="let item of TABS"
+    *ngFor="let item of tabs"
   >
-    {{ item }}
+    <span class='tab-text'>{{ item }}</span>
   </button>
 </div>

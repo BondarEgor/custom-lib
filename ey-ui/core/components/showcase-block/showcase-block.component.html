@@ -1,22 +1,22 @@
 <div class="usage-examples">
   <div class="usage-example-header">
-    <ey-tabs (tabChange)="setActiveTab($event)"></ey-tabs>
+    <ey-tabs [tabs]="tabs" (tabChange)="setActiveTab($event)"></ey-tabs>
   </div>
-  <ey-showcase-inner [ngSwitch]="activeTab">
-    <ng-content *ngSwitchCase="'PREVIEW'">
-      <lib-button-preview></lib-button-preview>
+    <ey-showcase-inner [ngSwitch]="activeTab">
+    <ng-content class='inner-block' *ngSwitchCase="'Preview'">
+      <lib-button-preview [buttons]="showcaseItem.buttons"></lib-button-preview>
     </ng-content>
 
-    <ng-content *ngSwitchCase="'TYPESCRIPT'">
-      <lib-button-ts></lib-button-ts>
+    <ng-content *ngSwitchCase="'Typescript'">
+      <lib-button-ts [code]="showcaseItem.typescript"></lib-button-ts>
     </ng-content>
 
     <ng-content *ngSwitchCase="'HTML'">
-      <lib-button-html></lib-button-html>
+      <lib-button-html [html]="showcaseItem.html"></lib-button-html>
     </ng-content>
 
     <ng-content *ngSwitchCase="'LESS'">
-      <lib-button-less></lib-button-less>
+      <lib-button-less [less]='showcaseItem.less'></lib-button-less>
     </ng-content>
   </ey-showcase-inner>
 </div>
